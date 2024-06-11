@@ -20,4 +20,6 @@ services:
       - '8080:8080'
     volumes:
       - ./status:/app
+    cap_add:
+      - NET_ADMIN
     stop_grace_period: 1m
