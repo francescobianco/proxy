@@ -14,13 +14,10 @@ services:
       - ./letsencrypt:/etc/letsencrypt
 
   status:
-    image: dockurr/statping
-    privileged: true
+    image: statping/statping
     ports:
       - '8080:8080'
     volumes:
       - ./status:/app
-    cap_add:
-      - NET_RAW
     stop_grace_period: 1m
     restart: unless-stopped
