@@ -23,3 +23,4 @@ services:
     cap_add:
       - NET_RAW
     stop_grace_period: 1m
+    restart: unless-stopped
